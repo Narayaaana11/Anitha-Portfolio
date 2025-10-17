@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 330 85% 75%;
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 330 85% 75%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 330 85% 75%;
+
+    --radius: 1.2rem;
+
+    /* Custom Design Tokens - Pink Theme */
+    --pink-primary: 330 85% 75%;
+    --pink-light: 330 90% 85%;
+    --pink-glow: 330 100% 80%;
+    --pink-dark: 330 70% 60%;
+    --dark-bg: 0 0% 7%;
+    --dark-card: 0 0% 10%;
+    --darker: 0 0% 5%;
+    --glass-bg: 0 0% 10% / 0.5;
+    
+    /* Gradients */
+    --gradient-pink: linear-gradient(135deg, hsl(330 85% 75%), hsl(340 90% 80%));
+    --gradient-pink-radial: radial-gradient(circle at top right, hsl(330 85% 75% / 0.15), transparent 70%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 5%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 15% / 0.8), hsl(0 0% 10% / 0.6));
+    
+    /* Shadows */
+    --shadow-pink: 0 0 40px hsl(330 85% 75% / 0.4);
+    --shadow-pink-strong: 0 0 60px hsl(330 85% 75% / 0.6);
+    --shadow-card: 0 20px 60px hsl(0 0% 0% / 0.6);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
